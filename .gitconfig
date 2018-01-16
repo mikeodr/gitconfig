@@ -1,0 +1,39 @@
+[core]
+	autocrlf = input
+	excludesfile = /home/modriscoll/.gitignore_global
+[user]
+	name = Mike O'Driscoll
+	email = modriscoll@clearpathrobotics.com
+[alias]
+	st = status -sb -uall
+	cm = commit
+	br = branch
+	co = checkout
+	lg = log -p
+	lsd = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	in = ! git fetch && git log --pretty=short HEAD..origin
+	out = log --pretty=short origin..HEAD
+	unstage = reset HEAD
+	undo = reset --soft HEAD^
+	credit = commit --amend --author "$1 <$2>" -C HEAD
+	amend = commit --amend
+	pushb = push -u origin
+	cob = checkout -b
+[color]
+	diff = auto
+	status = true
+	branch = auto
+	ui = 1
+[push]
+	default = simple
+[credential]
+	helper = cache
+
+[url "git+ssh://modriscoll@git.launchpad.net/"]
+	insteadof = lp:
+
+# Always use ssh for github, even if the remote URL uses https or git
+[url "git@github.com:"]
+  insteadOf = git://github.com/
+[url "git@github.com:"]
+  insteadOf = https://github.com/

@@ -3,7 +3,6 @@
 	excludesfile = /home/modriscoll/.gitignore_global
 [user]
 	name = Mike O'Driscoll
-	email = mikeodriscoll@gmail.com
 [alias]
 	st = status -sb -uall
 	cm = commit
